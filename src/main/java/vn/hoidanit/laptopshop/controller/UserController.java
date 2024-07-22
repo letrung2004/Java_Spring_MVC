@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ch.qos.logback.core.model.Model;
 import vn.hoidanit.laptopshop.service.UserService;
 
 @Controller
@@ -18,7 +19,8 @@ public class UserController {
 
     @RequestMapping("/")
     public String getHomePage() {
-        return "eric.html";
+        String test = this.userService.handleHello();
+        return "hello";
     }
 }
 
