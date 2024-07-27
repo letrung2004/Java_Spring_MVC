@@ -15,10 +15,7 @@ public class User {
     @Override
     public String toString() {
         return "User [email=" + email + ", name=" + name + ", id=" + id + ", passWord=" + passWord + ", address="
-                + address + ", phone=" + phone + ", getEmail()=" + getEmail() + ", getName()=" + getName()
-                + ", getId()=" + getId() + ", getPassWord()=" + getPassWord() + ", getAddress()=" + getAddress()
-                + ", getPhone()=" + getPhone() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-                + ", toString()=" + super.toString() + "]";
+                + address + ", phone=" + phone + "]";
     }
 
     public String getEmail() {
