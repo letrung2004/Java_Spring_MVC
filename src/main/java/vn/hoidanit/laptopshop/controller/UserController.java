@@ -28,18 +28,23 @@ public class UserController {
         return "hello";
     }
 
-    @RequestMapping("/admin/user")
-    public String getUserPage(Model model) {
-
+    @RequestMapping("/admin/user/create")
+    public String createNewUserPage(Model model) {
         model.addAttribute("newUser", new User());
-        model.addAttribute("hoidanit", "from controller with model");
         return "admin/user/create";
     }
 
-    @RequestMapping(value = "/admin/user/create1", method = RequestMethod.POST)
+    @RequestMapping(value = "/admin/user/create", method = RequestMethod.POST)
     public String createUserPage(Model model, @ModelAttribute("newUser") User data) {
         System.out.println("run here" + data);
         this.userService.handleSaveUser(data);
-        return "hello";
+        return "redirect:/admin/user";
+    }
+
+    @RequestMapping("/admin/user")
+    public String getUserPage(Model model) {
+        List<User> users = this.userService.getAllUsers();
+        model.addAttribute("user1", users);
+        return "admin/user/table_user";
     }
 }
