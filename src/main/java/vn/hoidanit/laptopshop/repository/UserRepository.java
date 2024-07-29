@@ -11,7 +11,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserRepository extends JpaRepository<User, Long> {
     User save(User dataUser);// hibernate sẽ chuyển câu lệnh save thành các câu lệnh thêm vào bảng trong SQL
 
-    List<User> findByEmail(String email);
+    List<User> findByEmail(String email); // tim kiem ds nguoi dung theo email
 
-    User findById(long id);
+    User findById(long id); // tim kim theo id
+
+    void deleteById(long id);
 }

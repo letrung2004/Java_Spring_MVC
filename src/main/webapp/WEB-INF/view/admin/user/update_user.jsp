@@ -6,7 +6,7 @@
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=, initial-scale=1.0">
-                <title>Update User</title>
+                <title>Update User ${newUser.id}</title>
                 <!-- Latest compiled and minified CSS -->
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
                 <!-- Latest compiled JavaScript -->
@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Email address:</label>
-                                    <form:input type="email" class="form-control" path="email" />
+                                    <form:input type="email" class="form-control" path="email" disabled="true" />
 
                                 </div>
                                 <div class="mb-3">
