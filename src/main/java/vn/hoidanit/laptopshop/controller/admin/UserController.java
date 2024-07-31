@@ -1,4 +1,4 @@
-package vn.hoidanit.laptopshop.controller;
+package vn.hoidanit.laptopshop.controller.admin;
 
 import java.util.List;
 
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class UserController {
@@ -49,14 +48,14 @@ public class UserController {
     public String getUserPage(Model model) {
         List<User> users = this.userService.getAllUsers();
         model.addAttribute("user1", users);
-        return "admin/user/table_user";
+        return "admin/user/show";
     }
 
     @RequestMapping("/admin/user/{id_User}")
     public String getUserDetailPage(Model model, @PathVariable long id_User) {
         User user = this.userService.getUserById(id_User);
         model.addAttribute("user", user);
-        return "admin/user/show_user";
+        return "admin/user/detail_user";
     }
 
     @RequestMapping("/admin/user/update/{id_User}")

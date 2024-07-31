@@ -33,23 +33,25 @@
                                             <!-- Day la phan tren bang -->
                                             <div class="d-flex justify-content-between">
                                                 <!-- id in h3 is id in UserController.java line 54 -->
-                                                <h3>Delete Users Detail</h3>
+                                                <h3>Users Detail</h3>
+
                                             </div>
 
                                             <hr />
-                                            <div class="alert alert-danger" role="alert">
-                                                Are you sure to delete this user?
+                                            <div class="card" style="width: 70%;">
+                                                <div class="card-header">
+                                                    User Information
+                                                </div>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">ID: ${user.id}</li>
+                                                    <li class="list-group-item">Full Name: ${user.name} </li>
+                                                    <li class="list-group-item">Email: ${user.email}</li>
+                                                    <li class="list-group-item">Phone: ${user.phone}</li>
+                                                    <li class="list-group-item">Address: ${user.address}</li>
+                                                </ul>
                                             </div>
-                                            <div>
-                                                <form:form method="post" action="/admin/user/delete"
-                                                    modelAttribute="userDelete">
-                                                    <div class="mb-3" style="display: none;">
-                                                        <label class="form-label">User ID:</label>
-                                                        <form:input type="text" class="form-control" path="id" />
-                                                    </div>
-                                                    <button type="submit" class="btn btn-danger">Confirm</button>
-                                                </form:form>
-                                            </div>
+                                            <a style="margin-top: 10px;" class="btn btn-success"
+                                                href="/admin/user">Back</a>
                                         </div>
                                     </div>
                                 </div>
