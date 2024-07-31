@@ -15,26 +15,27 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String roleName;
+    private String name;
     private String roleDescription;
+
     // mot role co nhieu user so huu(one role -> many user)
     @OneToMany(mappedBy = "role")
     private List<User> users;
 
-    public long getRoleId() {
+    public long getId() {
         return id;
     }
 
-    public void setRoleId(long roleId) {
-        this.id = roleId;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getRoleName() {
-        return roleName;
+    public String getName() {
+        return name;
     }
 
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getRoleDescription() {
@@ -43,6 +44,14 @@ public class Role {
 
     public void setRoleDescription(String roleDescription) {
         this.roleDescription = roleDescription;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
 }
