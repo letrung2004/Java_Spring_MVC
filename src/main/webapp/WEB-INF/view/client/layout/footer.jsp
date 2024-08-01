@@ -7,11 +7,11 @@
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="#">
-                                <h1 class="text-primary mb-0">Fruitables</h1>
-                                <p class="text-secondary mb-0">Fresh products</p>
+                                <h1 class="text-primary mb-0">Laptopshop</h1>
+                                <p class="text-secondary mb-0">@Le Quoc Trung</p>
                             </a>
                         </div>
-                        <div class="col-lg-6">
+                        <!-- <div class="col-lg-6">
                             <div class="position-relative mx-auto">
                                 <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number"
                                     placeholder="Your Email">
@@ -19,8 +19,8 @@
                                     class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white"
                                     style="top: 0; right: 0;">Subscribe Now</button>
                             </div>
-                        </div>
-                        <div class="col-lg-3">
+                        </div> -->
+                        <div class="col-lg-9">
                             <div class="d-flex justify-content-end pt-3">
                                 <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i
                                         class="fab fa-twitter"></i></a>
@@ -38,8 +38,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h4 class="text-light mb-3">Why People Like us!</h4>
-                            <p class="mb-4">typesetting, remaining essentially unchanged. It was
-                                popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+                            <p class="mb-4">Established in 2024, we take product quality as customer trust.</p>
                             <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Read
                                 More</a>
                         </div>
@@ -69,9 +68,9 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h4 class="text-light mb-3">Contact</h4>
-                            <p>Address: 1429 Netus Rd, NY 48247</p>
-                            <p>Email: Example@gmail.com</p>
-                            <p>Phone: +0123 4567 8910</p>
+                            <p>Address: Nha Be, Ho Chi Minh, Viet Nam</p>
+                            <p>Email: lequoctrunggg@gmail.com</p>
+                            <p>Phone: 0981840919</p>
                             <p>Payment Accepted</p>
                             <img src="/client/img/payment.png" class="img-fluid" alt="">
                         </div>
@@ -86,8 +85,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your
-                                Site Name</a>, All right reserved.</span>
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Le Quoc
+                                Trung</a>, All right reserved.</span>
                     </div>
                     <div class="col-md-6 my-auto text-center text-md-end text-white">
                         <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->

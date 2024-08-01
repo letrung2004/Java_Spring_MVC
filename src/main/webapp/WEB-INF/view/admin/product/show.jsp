@@ -21,13 +21,55 @@
                 <div id="layoutSidenav_content">
                     <main>
                         <div class="container-fluid px-4">
-                            <h1 class="mt-4">Manage Product</h1>
+                            <h1 class="mt-4">Manage Products</h1>
                             <ol class="breadcrumb mb-4">
                                 <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Products</li>
+                                <li class="breadcrumb-item active">Users</li>
                             </ol>
-                            <div>
-                                <h1>hello form product</h1>
+                            <div class="mt-5">
+                                <div class="row">
+                                    <div class="col-12 mx-auto">
+                                        <!-- Day la phan tren bang -->
+                                        <div class="d-flex justify-content-between">
+                                            <h3>Table Products</h3>
+                                            <a href="/admin/product/create" class="btn btn-primary">Create new
+                                                product</a>
+                                        </div>
+                                        <!-- day la phan bang -->
+                                        <hr />
+                                        <table class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Product name</th>
+                                                    <th scope="col">Price</th>
+                                                    <th scope="col">Factory</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <c:forEach var="user" items="${user1}">
+                                                    <tr>
+                                                        <th>${user.id}</th>
+                                                        <td>${user.name}</td>
+                                                        <td>${user.email}</td>
+                                                        <td>${user.phone}</td>
+                                                        <td>${user.role.name}</td>
+                                                        <td>
+                                                            <a class="btn btn-success"
+                                                                href="/admin/user/${user.id}">View</a>
+                                                            <a class="btn btn-warning mx-2"
+                                                                href="/admin/user/update/${user.id}">Update</a>
+                                                            <a class="btn btn-danger"
+                                                                href="/admin/user/delete/${user.id}">Delete</a>
+                                                        </td>
+                                                    </tr>
+                                                </c:forEach>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </main>
