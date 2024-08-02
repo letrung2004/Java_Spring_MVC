@@ -33,10 +33,10 @@
                     <div id="layoutSidenav_content">
                         <main>
                             <div class="container-fluid px-4">
-                                <h1 class="mt-4">Manage Users</h1>
+                                <h1 class="mt-4">Manage Products</h1>
                                 <ol class="breadcrumb mb-4">
                                     <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">Users</li>
+                                    <li class="breadcrumb-item active"><a href="/admin/product">Product</a></li>
                                 </ol>
                                 <div class="mt-5">
                                     <div class="row">
@@ -45,16 +45,31 @@
                                             <hr />
                                             <form:form method="post" action="/admin/product/create"
                                                 modelAttribute="newProduct" class="row" enctype="multipart/form-data">
-                                                <div class="mb-3 col-12 col-md-6">
-                                                    <label class="form-label">Name product:</label>
-                                                    <form:input type="text" class="form-control" path="proName" />
-                                                </div>
-                                                <div class="mb-3 col-12 col-md-6">
-                                                    <label class="form-label">Price:</label>
-                                                    <form:input type="number" class="form-control" path="proPrice"
-                                                        value="0.0" />
 
+                                                <!-- Add name product -->
+                                                <div class="mb-3 col-12 col-md-6">
+                                                    <c:set var="errorName">
+                                                        <form:errors path="proName" cssClass="invalid-feedback" />
+                                                    </c:set>
+                                                    <label class="form-label">Name product:</label>
+                                                    <form:input type="text"
+                                                        class="form-control ${not empty errorName ? 'is-invalid':''}"
+                                                        path="proName" />
+                                                    ${errorName}
                                                 </div>
+
+                                                <!-- Add price product -->
+                                                <div class="mb-3 col-12 col-md-6">
+                                                    <c:set var="errorPrice">
+                                                        <form:errors path="proPrice" cssClass="invalid-feedback" />
+                                                    </c:set>
+                                                    <label class="form-label">Price:</label>
+                                                    <form:input type="number"
+                                                        class="form-control ${not empty errorPrice ? 'is-invalid':''}"
+                                                        path="proPrice" value="0.0" step="0.01" />
+                                                    ${errorPrice}
+                                                </div>
+
                                                 <div class="mb-3">
                                                     <label class="form-label">Detail description:</label>
                                                     <form:input type="text" class="form-control" path="detailDesc" />
@@ -65,15 +80,26 @@
                                                     <form:input type="text" class="form-control" path="shortDesc" />
 
                                                 </div>
+                                                <!-- Add product quantity -->
                                                 <div class="mb-3 col-12 col-md-6">
+                                                    <c:set var="errorQuantity">
+                                                        <form:errors path="quantity" cssClass="invalid-feedback" />
+                                                    </c:set>
                                                     <label class="form-label">Quantity:</label>
-                                                    <form:input type="number" class="form-control" path="quantity"
-                                                        value="0" />
-
+                                                    <form:input type="number"
+                                                        class="form-control ${not empty errorQuantity ? 'is-invalid':''}"
+                                                        path="quantity" />
+                                                    ${errorQuantity}
                                                 </div>
+
                                                 <div class="mb-3 col-12 col-md-6">
+                                                    <c:set var="errorFactory">
+                                                        <form:errors path="factory" cssClass="invalid-feedback" />
+                                                    </c:set>
                                                     <label class="form-label">Factory:</label>
-                                                    <form:select class="form-select" path="factory">
+                                                    <form:select
+                                                        class="form-select ${not empty errorFactory ? 'is-invalid':''}"
+                                                        path="factory">
                                                         <form:option value="Apple">Apple</form:option>
                                                         <form:option value="SamSung">SamSung</form:option>
                                                         <form:option value="Dell">Dell</form:option>
@@ -83,6 +109,7 @@
                                                         <form:option value="Acer">Acer</form:option>
                                                         <form:option value="Microsoft">Microsoft</form:option>
                                                     </form:select>
+                                                    ${errorFactory}
                                                 </div>
 
                                                 <div class="mb-3 col-12 col-md-6">

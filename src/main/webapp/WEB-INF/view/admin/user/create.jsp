@@ -37,7 +37,7 @@
                                 <h1 class="mt-4">Manage Users</h1>
                                 <ol class="breadcrumb mb-4">
                                     <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">Users</li>
+                                    <li class="breadcrumb-item active"><a href="/admin/user">User</a></li>
                                 </ol>
                                 <div class="mt-5">
                                     <div class="row">
@@ -46,6 +46,8 @@
                                             <hr />
                                             <form:form method="post" action="/admin/user/create"
                                                 modelAttribute="newUser" class="row" enctype="multipart/form-data">
+
+                                                <!-- Add email user -->
                                                 <div class="mb-3 col-12 col-md-6">
                                                     <c:set var="errorEmail">
                                                         <form:errors path="email" cssClass="invalid-feedback" />

@@ -24,7 +24,7 @@
                             <h1 class="mt-4">Manage Products</h1>
                             <ol class="breadcrumb mb-4">
                                 <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Users</li>
+                                <li class="breadcrumb-item active"><a href="/admin/product">Product</a></li>
                             </ol>
                             <div class="mt-5">
                                 <div class="row">
@@ -44,23 +44,22 @@
                                                     <th scope="col">Product name</th>
                                                     <th scope="col">Price</th>
                                                     <th scope="col">Factory</th>
+                                                    <th scope="col">Quantity</th>
+                                                    <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <c:forEach var="user" items="${user1}">
+                                                <c:forEach var="product" items="${product1}">
                                                     <tr>
-                                                        <th>${user.id}</th>
-                                                        <td>${user.name}</td>
-                                                        <td>${user.email}</td>
-                                                        <td>${user.phone}</td>
-                                                        <td>${user.role.name}</td>
+                                                        <th>${product.id}</th>
+                                                        <td>${product.proName}</td>
+                                                        <td>${product.proPrice}</td>
+                                                        <td>${product.factory}</td>
+                                                        <td>${product.quantity}</td>
                                                         <td>
-                                                            <a class="btn btn-success"
-                                                                href="/admin/user/${user.id}">View</a>
-                                                            <a class="btn btn-warning mx-2"
-                                                                href="/admin/user/update/${user.id}">Update</a>
-                                                            <a class="btn btn-danger"
-                                                                href="/admin/user/delete/${user.id}">Delete</a>
+                                                            <a class="btn btn-success" href="">View</a>
+                                                            <a class="btn btn-warning mx-2" href="">Update</a>
+                                                            <a class="btn btn-danger" href="">Delete</a>
                                                         </td>
                                                     </tr>
                                                 </c:forEach>
